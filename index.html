@@ -1,7 +1,3 @@
-
-<!DOCTYPE html>
-
-<html>
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -32,148 +28,293 @@
                 font-family: var(--site-font) !important;
             }
         </style>
-</head>
-<body class="theme-1">
-<div id="wrapper">
-<div data-src="header.html" id="header"></div>
-<div id="mainPageContent">
-<section class="team-section padding section-wrapper home-5 effect slide-right">
+<style id="aiModalSpinnerStyles">
+        .ai-modal-content {
+            position: relative;
+        }
+
+        /* Overlay blocks everything */
+        .ai-modal-spinner {
+            position: absolute;
+            inset: 0;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            z-index: 20;
+            backdrop-filter: blur(1.5px);
+            pointer-events: auto; /* blocks modal */
+        }
+
+        /* Spinner itself should NOT intercept clicks */
+        .ai-modal-spinner * {
+            pointer-events: none;
+        }
+
+        /* Close button MUST be above overlay */
+        .ai-close {
+            align-self: flex-start;
+            margin-right: auto; /* push left */
+            margin-left: 0;
+            z-index: 30;
+        }
+
+
+        /* Spinner styling */
+        .ai-spinner {
+            width: 42px;
+            height: 42px;
+            border: 4px solid rgba(0,0,0,0.25);
+            border-top-color: #000;
+            border-radius: 50%;
+            animation: aiSpin 0.9s linear infinite;
+        }
+
+        @keyframes aiSpin {
+            to { transform: rotate(360deg); }
+        }
+
+    </style><style>
+.curtain-overlay {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  pointer-events: none;
+  z-index: 2;
+}
+</style>
+<style>
+.curtain-overlay {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  pointer-events: none;
+  z-index: 2;
+}
+</style>
+<style>
+.curtain-overlay {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  pointer-events: none;
+  z-index: 2;
+}
+</style>
+<style>
+.curtain-overlay {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  pointer-events: none;
+  z-index: 2;
+}
+</style></head>
+<body class="theme-1" style="">
+<div class="top-bar" id="top-bar"><button class="" id="enable-editmode">Enable Edit Mode</button><button onclick="uploadeditedproject()">upload changes</button><button class="hidden" disabled="" id="save-changes">Save</button></div><div class="" id="wrapper" style="pointer-events: auto;">
+<div class="" data-src="header.html" id="header"></div>
+<div class="" id="mainPageContent">
+<section class="team-section padding section-wrapper home-5 effect slide-right" id="section-7ptpbi6yoxi">
 <div class="container">
 <div class="section-heading mb-40 text-center">
-<h2>Meet Our Instructors</h2>
-<p> We have well trained and experienced line of Faculties stationed in our campus who are committed to
+<h2 class="">Meet Our Instructors</h2>
+<p class=""> We have well trained and experienced line of Faculties stationed in our campus who are committed to
 				instil life values and quality</p>
 </div>
 <div class="row team-wrap">
 <div class="col-lg-3 col-md-6 sm-padding">
 <div class="team-box">
 <div class="team-thumb">
-<img alt="team" src="assets/images/team-1.jpg"/>
+<img alt="team" class="updateImg" data-original-src="assets/images/team-1.jpg" src="assets/images/team-1.jpg"/>
 </div>
 <div class="team-details">
-<h4>Michel Brown</h4>
-<span>Pre-Primary Incharge</span>
+<h4 class="">Michel Brown</h4>
+<span class="">Pre-Primary Incharge</span>
 </div>
 </div>
 </div>
 <div class="col-lg-3 col-md-6 sm-padding">
 <div class="team-box">
 <div class="team-thumb">
-<img alt="team" src="assets/images/team-2.jpg"/>
+<img alt="team" class="updateImg" data-original-src="assets/images/team-2.jpg" src="assets/images/team-2.jpg"/>
 </div>
 <div class="team-details">
-<h4>Donal Trump</h4>
-<span>Primary Incharge</span>
+<h4 class="">Donal Trump</h4>
+<span class="">Primary Incharge</span>
 </div>
 </div>
 </div>
 <div class="col-lg-3 col-md-6 sm-padding">
 <div class="team-box">
 <div class="team-thumb">
-<img alt="team" src="assets/images/team-3.jpg"/>
+<img alt="team" class="updateImg" data-original-src="assets/images/team-3.jpg" src="assets/images/team-3.jpg"/>
 </div>
 <div class="team-details">
-<h4>Jhon Smith</h4>
-<span>High School Incharge</span>
+<h4 class="">Jhon Smith</h4>
+<span class="">High School Incharge</span>
 </div>
 </div>
 </div>
 <div class="col-lg-3 col-md-6 sm-padding">
 <div class="team-box">
 <div class="team-thumb">
-<img alt="team" src="assets/images/team-4.jpg"/>
+<img alt="team" class="updateImg" data-original-src="assets/images/team-4.jpg" src="assets/images/team-4.jpg"/>
 </div>
 <div class="team-details">
-<h4>Angelina Rose</h4>
-<span>Junior College Incharge</span>
+<h4 class="">Angelina Rose</h4>
+<span class="">Junior College Incharge</span>
 </div>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section class="event-section bg-grey padding section-wrapper home-7 effect flip-in">
+<section class="welcome-section section-wrapper home-1 effect fade-in" data-aos="fade-up" data-aos-anchor-placement="top-bottom" id="section-03qaltphiu4k">
+<div class="container">
+<div class="row clearfix">
+<!--Content Column-->
+<div class="content-column col-lg-7 col-md-12 col-sm-12">
+<div class="inner-column">
+<h2 class="">Welcome to <span class="company_name">Auto Repair Shops</span></h2>
+<div class="text">
+<p class="">At <strong class="">Auto Repair Shops</strong>, we provide trusted and reliable car care services.
+                            From routine maintenance to complete diagnostics and repair, our skilled technicians
+                            ensure your vehicle stays safe, efficient, and road-ready. We combine modern technology
+                            with years of expertise to deliver service you can count on.</p>
+<h3 class="">Our Journey at <span class="company_name">Auto Repair Shops</span></h3>
+<p class="">With a history of serving thousands of satisfied customers, we’ve built a reputation for
+                            excellence in quality and customer care. From engine work to body repair, we aim to make
+                            every drive worry-free.</p>
+</div>
+<a class="theme-btn btn-style-three" href="#" style="cursor: pointer;">Learn More</a>
+</div>
+</div>
+<!--image Column-->
+<div class="image-column col-lg-5 col-md-12 col-sm-12">
+<div class="image">
+<img alt="" class="updateImg" data-original-src="assets/images/home-1.jpg" src="assets/images/home-1.jpg"/>
+</div>
+</div>
+</div>
+</div>
+</section><div class="section-wrapper home-3 effect slide-left animate" id="section-xuowqggt50d">
+<article class="container">
+<div class="row home-3-content align-items-center">
+<!-- Gray background layer -->
+<div class="home-3-bg"></div>
+<!-- Image Section -->
+<div class="col-md-6 home-3-image-wrapper">
+<img alt="Person Working" class="home-3_banner1" src="assets/images/home-3_banner1.jpg"/>
+</div>
+<!-- Text Section -->
+<div class="col-md-6 home-3-text" max-limit="300">
+<h5 class="home-3-subtitle">MasterClass <span class="home-3-highlight">at Work</span></h5>
+<h2 class="home-3-title">LEVEL UP YOUR TEAM</h2>
+<p class="home-3-description">
+					See why leading organizations rely on MasterClass for learning &amp; development.
+				</p>
+<div class="home-3-buttons">
+<a class="home-3-btn home-3-btn-primary" href="#" style="cursor: pointer;">Contact Sales</a>
+<a class="home-3-btn home-3-btn-secondary" href="#" style="cursor: pointer;">Learn More →</a>
+</div>
+</div>
+</div>
+</article>
+</div><section class="event-section bg-grey padding section-wrapper home-7 effect flip-in animate" id="section-i012806gjs8">
 <div class="container">
 <div class="section-heading mb-40 text-center">
-<h2>Upcoming Events</h2>
+<h2 class="">Upcoming Events</h2>
 </div>
 <div class="event-items">
 <div class="row event-wrap d-flex align-items-center">
 <div class="col-lg-2 text-center">
 <div class="event-date">
-<h2>21 <span>June</span></h2>
+<h2 class="">21 <span class="">June</span></h2>
 </div>
 <div class="ticket-btn">
-<a class="default-btn" href="#">Join Now</a>
+<a class="default-btn" href="#" style="cursor: pointer;">Join Now</a>
 </div>
 </div>
 <div class="col-lg-5">
 <div class="event-details">
-<h2><a href="#">International Yoga Day</a></h2>
+<h2 class=""><a class="" href="#" style="cursor: pointer;">International Yoga Day</a></h2>
 <ul class="event-time">
-<li><i class="ri-time-line"></i> 5:00 AM - 9:00 PM</li>
-<li><i class="ri-map-pin-line"></i> Inter Continental Garden, Mumbai.</li>
+<li class=""><i class="ri-time-line"></i> 5:00 AM - 9:00 PM</li>
+<li class=""><i class="ri-map-pin-line"></i> Inter Continental Garden, Mumbai.</li>
 </ul>
-<p>Yoga day is celebrated on 21st June every year. This year a special session was
+<p class="">Yoga day is celebrated on 21st June every year. This year a special session was
 							organized
-							for the students of the Primary Section. <br/>The session was conducted by the
+							for the students of the Primary Section. <br class=""/>The session was conducted by the
 							instructor,
 							Chantelle Cabral. </p>
 </div>
 </div>
 <div class="col-lg-5">
 <div class="event-thumb">
-<img alt="event" src="assets/images/event-1.jpg"/>
+<img alt="event" class="updateImg" data-original-src="assets/images/event-1.jpg" src="assets/images/event-1.jpg"/>
 </div>
 </div>
 </div>
 <div class="row event-wrap d-flex align-items-center">
 <div class="col-lg-2 text-center">
 <div class="event-date">
-<h2>31 <span>January</span></h2>
+<h2 class="">31 <span class="">January</span></h2>
 </div>
 <div class="ticket-btn">
-<a class="default-btn" href="#">Join Now</a>
+<a class="default-btn" href="#" style="cursor: pointer;">Join Now</a>
 </div>
 </div>
 <div class="col-lg-5">
 <div class="event-details">
-<h2><a href="#">Std 12th Farewell</a></h2>
+<h2 class=""><a class="" href="#" style="cursor: pointer;">Std 12th Farewell</a></h2>
 <ul class="event-time">
-<li><i class="ri-time-line"></i> 5:00 AM - 9:00 PM</li>
-<li><i class="ri-map-pin-line"></i> Inter Continental Garden, Mumbai.</li>
+<li class=""><i class="ri-time-line"></i> 5:00 AM - 9:00 PM</li>
+<li class=""><i class="ri-map-pin-line"></i> Inter Continental Garden, Mumbai.</li>
 </ul>
-<p>The morning of 3rd February was filled with mixed emotions, as students and
+<p class="">The morning of 3rd February was filled with mixed emotions, as students and
 							teachers of St.
 							Vincent’s came together to bid farewell to the outgoing students of Std.
-							12th.<br/>The day
+							12th.<br class=""/>The day
 							began with a special morning assembly,
 							conducted by the students of Std. 11th. </p>
 </div>
 </div>
 <div class="col-lg-5">
 <div class="event-thumb">
-<img alt="event" src="assets/images/event-2.jpg"/>
+<img alt="event" class="updateImg" data-original-src="assets/images/event-2.jpg" src="assets/images/event-2.jpg"/>
 </div>
 </div>
 </div>
 <div class="row event-wrap d-flex align-items-center">
 <div class="col-lg-2 text-center">
 <div class="event-date">
-<h2>01 <span>February</span></h2>
+<h2 class="">01 <span class="">February</span></h2>
 </div>
 <div class="ticket-btn">
-<a class="default-btn" href="#">Join Now</a>
+<a class="default-btn" href="#" style="cursor: pointer;">Join Now</a>
 </div>
 </div>
 <div class="col-lg-5">
 <div class="event-details">
-<h2><a href="#">Interclass English Debate Competition - Std. 9 and 10</a></h2>
+<h2 class=""><a class="" href="#" style="cursor: pointer;">Interclass English Debate Competition - Std. 9 and 10</a></h2>
 <ul class="event-time">
-<li><i class="ri-time-line"></i> 5:00 AM - 9:00 PM</li>
-<li><i class="ri-map-pin-line"></i> Inter Continental Garden, Mumbai.</li>
+<li class=""><i class="ri-time-line"></i> 5:00 AM - 9:00 PM</li>
+<li class=""><i class="ri-map-pin-line"></i> Inter Continental Garden, Mumbai.</li>
 </ul>
-<p>“You don't win a debate by suppressing discussion; you win it with a better
+<p class="">“You don't win a debate by suppressing discussion; you win it with a better
 							argument.” The
 							Interclass English Debate Competition for Std. IX and X was held on Tuesday, the
 							29th of
@@ -184,7 +325,7 @@
 </div>
 <div class="col-lg-5">
 <div class="event-thumb">
-<img alt="event" src="assets/images/event-3.jpg"/>
+<img alt="event" class="updateImg" data-original-src="assets/images/event-3.jpg" src="assets/images/event-3.jpg"/>
 </div>
 </div>
 </div>
@@ -192,7 +333,7 @@
 </div>
 </section>
 </div>
-<div data-src="footer.html" id="footer"></div>
+<div class="" data-src="footer.html" id="footer"></div>
 </div>
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/init.js"></script>
@@ -247,5 +388,5 @@
             </script>
 <script src="assets/js/middle-section.js"></script>
 <script src="assets/js/common_js/image_uploader.js"></script>
+<script src="/assets/js/custom/editModeScript.js"></script>
 </body>
-</html>
